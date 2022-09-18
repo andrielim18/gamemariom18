@@ -1,0 +1,222 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Raleway:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Raleway:wght@100;200&family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Press+Start+2P&family=Raleway:wght@100;200&family=Sawarabi+Mincho&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.capaAbertura{
+   z-index: 4;
+   position: absolute;
+   display: inline-block;
+   width: 100%;
+   background-color: rgb(232, 120, 28);
+}
+
+.capaAbertura img{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+
+}
+.btn-reload{
+   
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    z-index: 5; 
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(15, 139, 40);
+    border-radius: 5px;   
+    font-family: 'Sawarabi Mincho', serif;
+    font-weight: bold;
+    color:white;
+    border: 2px solid white;
+    top: 480px;
+    right: 650px; 
+    font-size: 30px;
+    /*display: flex;*/  
+    cursor: pointer;
+    display: none;
+}
+.btn-reload:hover{
+    transform:translateX(-2%);
+}
+
+
+
+
+.game{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgb(209, 124, 64),rgb(230, 98, 62)) ;
+    background-size: contain;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: -2;
+}
+
+#text-start{
+    display: inline-block;
+    background-color: rgb(74, 185, 222);
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 10px 10px  rgb(15, 139, 40);
+    font-size: 60px;
+    margin-left: 550px;
+    margin-top: 550px;
+    width: 450px;
+    color:white;
+    border: 2px solid white;
+    font-family: 'Sawarabi Mincho', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: absolute;
+    z-index: 3;
+}
+
+
+/*.gameOver{
+    font-size: 60px;
+    font-family: 'Rubik Moonrocks', cursive;
+    color: rgb(15, 139, 40);   
+    margin-top: 550px;
+
+}*/
+
+.piso{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 91.2%;
+    z-index: 0;
+    background-image: url(./imagens/floor.png);
+    background-repeat: repeat;
+    background-size: cover; 
+}
+
+.pipe-game{
+    position: absolute;
+    bottom: 0;
+    width: 80px; 
+    z-index: 1;
+
+}
+ .pipe-animation{
+    animation: pipe-animation 1.5s infinite linear;
+
+ }
+
+.super-mario{
+    width: 150px;
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    z-index: 1;
+}
+
+.jump-mario{
+    animation: mario-animation 500ms ease-out;
+}
+
+.cloudGame{
+    margin-top: 10px;
+    position: absolute;
+    width: 350px;
+    animation: clouds-animation 30s infinite linear;
+    transition-delay: 1s;
+}
+.cloudGame1{
+    margin-top: 15px;
+    position: absolute;
+    width: 250px;
+    animation: clouds-animation 40s infinite linear;
+    transition-delay: 8s;
+}
+
+.thesun{
+    margin-top: 20px;
+    position: absolute;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.Pontos {
+    background-color: rgb(15, 139, 40);
+    border-radius: 5px; 
+    position: absolute;
+    font-family: 'Sawarabi Mincho', serif;
+    font-weight: bold;
+    color:white;
+    border: 2px solid white;
+    top: 30px;
+    right: 10px;
+    width: 180px;
+    font-size: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+
+
+@keyframes pipe-animation{
+    from {
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation{
+    
+    from{
+        right: -550px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes mario-animation{
+    0%{
+        bottom: 0;}
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+
+    }
+
+    60%{
+        bottom: 180px;
+
+
+    }
+
+    70%{
+        bottom: 180px;
+
+    }
+
+    100%{
+        bottom: 0;
+
+    }
+
+}
